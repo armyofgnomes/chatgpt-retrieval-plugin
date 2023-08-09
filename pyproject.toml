@@ -29,6 +29,7 @@ arrow = "^1.2.3"
 chromadb = "^0.3.25"
 pinecone-client = "^2.1.0"
 loguru = "^0.7.0"
+elasticsearch = "8.8.2"
 
 [tool.poetry.scripts]
 start = "server.main:start"
