@@ -250,24 +250,19 @@ six = ">=1.12.0"
 
 [[package]]
 name = "azure-search-documents"
-version = "11.4.0a20230509004"
+version = "11.4.0b8"
 description = "Microsoft Azure Cognitive Search Client Library for Python"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "azure-search-documents-11.4.0a20230509004.zip", hash = "sha256:6cca144573161a10aa0fcd13927264453e79c63be6a53cf2ec241c9c8c22f6b5"},
-    {file = "azure_search_documents-11.4.0a20230509004-py3-none-any.whl", hash = "sha256:6215e9a4f9e935ff3eac1b7d5519c6c0789b4497eb11242d376911aaefbb0359"},
+    {file = "azure-search-documents-11.4.0b8.zip", hash = "sha256:b178ff52918590191a9cb7f411a9ab3cb517663666a501a3e84b715d19b0d93b"},
+    {file = "azure_search_documents-11.4.0b8-py3-none-any.whl", hash = "sha256:4137daa2db75bff9484d394c16c0604822a51281cad2f50e11d7c48dd8d4b4cf"},
 ]
 
 [package.dependencies]
 azure-common = ">=1.1,<2.0"
 azure-core = ">=1.24.0,<2.0.0"
 isodate = ">=0.6.0"
-
-[package.source]
-type = "legacy"
-url = "https://pkgs.dev.azure.com/azure-sdk/public/_packaging/azure-sdk-for-python/pypi/simple"
-reference = "azure-sdk-dev"
 
 [[package]]
 name = "backoff"
@@ -925,6 +920,42 @@ files = [
     {file = "duckdb-0.8.0-cp39-cp39-win_amd64.whl", hash = "sha256:d0f0f104d30418808bafbe9bccdcd238588a07bd246b3cff13842d60bfd8e8ba"},
     {file = "duckdb-0.8.0.tar.gz", hash = "sha256:c68da35bab5072a64ada2646a5b343da620ddc75a7a6e84aa4a1e0628a7ec18f"},
 ]
+
+[[package]]
+name = "elastic-transport"
+version = "8.4.0"
+description = "Transport classes and utilities shared among Python Elastic client libraries"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "elastic-transport-8.4.0.tar.gz", hash = "sha256:b9ad708ceb7fcdbc6b30a96f886609a109f042c0b9d9f2e44403b3133ba7ff10"},
+    {file = "elastic_transport-8.4.0-py3-none-any.whl", hash = "sha256:19db271ab79c9f70f8c43f8f5b5111408781a6176b54ab2e54d713b6d9ceb815"},
+]
+
+[package.dependencies]
+certifi = "*"
+urllib3 = ">=1.26.2,<2"
+
+[package.extras]
+develop = ["aiohttp", "mock", "pytest", "pytest-asyncio", "pytest-cov", "pytest-httpserver", "pytest-mock", "requests", "trustme"]
+
+[[package]]
+name = "elasticsearch"
+version = "8.8.2"
+description = "Python client for Elasticsearch"
+optional = false
+python-versions = ">=3.6, <4"
+files = [
+    {file = "elasticsearch-8.8.2-py3-none-any.whl", hash = "sha256:bffd6ce4faaacf90e6f617241773b3da8fb94e2e83554f5508e2fab92ca79643"},
+    {file = "elasticsearch-8.8.2.tar.gz", hash = "sha256:bed8cf8fcc6c3be7c254b579de4c29afab021f373c832246f912d37aef3c6bd5"},
+]
+
+[package.dependencies]
+elastic-transport = ">=8,<9"
+
+[package.extras]
+async = ["aiohttp (>=3,<4)"]
+requests = ["requests (>=2.4.0,<3.0.0)"]
 
 [[package]]
 name = "environs"
@@ -4187,4 +4218,4 @@ postgresql = ["psycopg2cffi"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "8f3842f331bebb624220dc5558ab920c2526d8f22b4cd9f15748b54f5f33a0f3"
+content-hash = "39179f3602509004d328d1fb7a48068c86f8e93ab0660cf18c7d7f85018cacf7"
