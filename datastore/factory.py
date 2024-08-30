@@ -36,6 +36,12 @@ async def get_datastore() -> DataStore:
             from datastore.providers.redis_datastore import RedisDataStore
 
             return await RedisDataStore.init()
+        case "azurecosmosdb":
+            from datastore.providers.azurecosmosdb_datastore import (
+                AzureCosmosDBDataStore,
+            )
+
+            return await AzureCosmosDBDataStore.create()
         case "qdrant":
             from datastore.providers.qdrant_datastore import QdrantDataStore
 
@@ -62,6 +68,12 @@ async def get_datastore() -> DataStore:
             )
 
             return ElasticsearchDataStore()
+        case "mongodb":
+            from datastore.providers.mongodb_atlas_datastore import (
+                MongoDBAtlasDataStore,
+            )
+
+            return MongoDBAtlasDataStore()
         case _:
             raise ValueError(
                 f"Unsupported vector database: {datastore}. "
